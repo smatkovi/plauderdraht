@@ -17,7 +17,7 @@ import tarfile
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, "wurzel")
 
-VERSION = "1.0"
+VERSION = "1.0.1"
 CONTROL = """Package: plauderdraht
 Version: %s
 Architecture: armel
