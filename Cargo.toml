@@ -1,0 +1,21 @@
+[package]
+name = "plauderdraht"
+version = "1.0.0"
+edition = "2021"
+description = "STARTTLS-Draht fuer Harmattans XMPP-Konto"
+license = "GPL-3.0-or-later"
+
+[[bin]]
+name = "plauderdraht"
+path = "src/main.rs"
+
+[dependencies]
+libc = "0.2"
+rustls = { version = "0.23", default-features = false, features = ["ring", "std", "tls12"] }
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
